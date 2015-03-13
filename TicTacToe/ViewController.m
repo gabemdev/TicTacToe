@@ -369,6 +369,15 @@
 
 
 //Computer play??????
+
+/*
+ 1. Identify players.
+ 2. Be able to switch from players(already implemented)
+ 3. Make player pick random number from 1 - 9
+ 4. Depending on random number, then if that label is empty, then set O
+ 6. check if computer won
+ */
+
 - (void)computerPlay {
 
     self.playerX = 1;
