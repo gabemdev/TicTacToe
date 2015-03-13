@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "WebViewController.h"
 
+
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *labelOne;
 @property (weak, nonatomic) IBOutlet UILabel *labelTwo;
@@ -23,16 +24,19 @@
 @property (weak, nonatomic) IBOutlet UILabel *whichPlayerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeRemainingLabel;
 @property (strong, nonatomic) IBOutlet UILabel *movedLabel;
+@property (weak, nonatomic) IBOutlet UIButton *helpButton;
 
 @property NSArray *labelArray;
 @property BOOL didWin;
-@property (weak, nonatomic) IBOutlet UIButton *helpButton;
 @property NSTimer *timer;
 @property NSInteger timeRemaining;
 @property NSInteger turn;
 
 @property CGPoint originPoint;
 @property CGPoint finalPoint;
+
+@property (nonatomic) NSInteger playerX;
+@property (nonatomic) NSInteger playerO;
 
 
 @end
@@ -361,6 +365,48 @@
         self.whichPlayerLabel.textColor = [UIColor blueColor];
         self.movedLabel.textColor = self.whichPlayerLabel.textColor;
     }
+}
+
+
+//Computer play??????
+- (void)computerPlay {
+
+    self.playerX = 1;
+    self.playerO = 2;
+
+    self.turn = arc4random_uniform(2);
+
+    if (self.turn == self.playerX) {
+        self.whichPlayerLabel.text = @"X";
+    } else if (self.turn == self.playerO) {
+        self.whichPlayerLabel.text = @"O";
+    }
+
+    for (UILabel *label in self.labelArray){
+        if (![label.text isEqualToString:@"X"] || ![label.text isEqualToString:@"O"]) {
+            if (self.turn == 1) {
+                self.labelOne.text = self.whichPlayerLabel.text;
+            } else if (self.turn == 2) {
+                self.labelTwo.text = self.whichPlayerLabel.text;
+            } else if (self.turn == 3) {
+                self.labelThree.text = self.whichPlayerLabel.text;
+            } else if (self.turn == 4) {
+                self.labelFour.text = self.whichPlayerLabel.text;
+            } else if (self.turn == 5) {
+                self.labelFive.text = self.whichPlayerLabel.text;
+            } else if (self.turn == 6) {
+                self.labelSix.text = self.whichPlayerLabel.text;
+            } else if (self.turn == 7) {
+                self.labelSeven.text = self.whichPlayerLabel.text;
+            } else if (self.turn == 8) {
+                self.labelEight.text = self.whichPlayerLabel.text;
+            } else if (self.turn == 9) {
+                self.labelNine.text = self.whichPlayerLabel.text;
+            }
+        }
+    }
+
+
 }
 
 
