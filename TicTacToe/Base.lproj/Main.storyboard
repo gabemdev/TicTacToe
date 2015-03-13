@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JF-2m-tKK">
+                                <rect key="frame" x="11" y="156" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyz-e7-7Eb">
+                                <rect key="frame" x="229" y="156" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1u-cq-A8h">
+                                <rect key="frame" x="11" y="244" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haH-io-Awg">
+                                <rect key="frame" x="120" y="244" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX7-Jm-Rsj">
+                                <rect key="frame" x="229" y="244" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VS0-a4-CBm">
+                                <rect key="frame" x="11" y="332" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzC-HM-ND3">
+                                <rect key="frame" x="120" y="332" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOY-DR-YwY">
+                                <rect key="frame" x="229" y="332" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUv-36-r2d">
+                                <rect key="frame" x="120" y="458" width="80" height="80"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uE7-9K-2jH">
+                                <rect key="frame" x="16" y="28" width="64" height="30"/>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.47843137250000001" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal" title="Help">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onHelpButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MXn-bG-2mx"/>
+                                    <segue destination="YzO-tZ-7u2" kind="modal" id="9D9-NN-Unz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jp6-Ng-7yZ">
+                                <rect key="frame" x="120" y="156" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time Remaining: 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ht7-ud-hCL">
+                                <rect key="frame" x="71" y="93" width="179" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eT-AB-yHl">
+                                <rect key="frame" x="120" y="458" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.7923073743386243" green="0.7923073743386243" blue="0.7923073743386243" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="eyc-XF-1NN" appends="YES" id="GL8-N9-sfm"/>
+                            <outletCollection property="gestureRecognizers" destination="Qs6-ob-dKF" appends="YES" id="LS3-H3-gGr"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="helpButton" destination="uE7-9K-2jH" id="ZJm-fA-1B9"/>
+                        <outlet property="labelEight" destination="AzC-HM-ND3" id="IbX-wn-g2r"/>
+                        <outlet property="labelFive" destination="haH-io-Awg" id="gRx-tb-8hT"/>
+                        <outlet property="labelFour" destination="R1u-cq-A8h" id="ezN-L8-amB"/>
+                        <outlet property="labelNine" destination="QOY-DR-YwY" id="fU6-aU-ayv"/>
+                        <outlet property="labelOne" destination="1JF-2m-tKK" id="pHo-tN-LkU"/>
+                        <outlet property="labelSeven" destination="VS0-a4-CBm" id="6eU-RS-EDR"/>
+                        <outlet property="labelSix" destination="JX7-Jm-Rsj" id="Rnl-eo-66M"/>
+                        <outlet property="labelThree" destination="wyz-e7-7Eb" id="Mpn-JQ-3l2"/>
+                        <outlet property="labelTwo" destination="jp6-Ng-7yZ" id="9uM-Ff-Alq"/>
+                        <outlet property="movedLabel" destination="6eT-AB-yHl" id="zEI-cO-73P"/>
+                        <outlet property="timeRemainingLabel" destination="Ht7-ud-hCL" id="LGY-WX-gFd"/>
+                        <outlet property="whichPlayerLabel" destination="VUv-36-r2d" id="oXz-hX-a2t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="eyc-XF-1NN">
+                    <connections>
+                        <action selector="onLabelTapped:" destination="vXZ-lx-hvc" id="LKl-Zz-N4Q"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Qs6-ob-dKF">
+                    <connections>
+                        <action selector="onLabelMoved:" destination="vXZ-lx-hvc" id="9Bl-o4-ZXr"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="97" y="565"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="yDx-Ub-WK6">
+            <objects>
+                <viewController id="YzO-tZ-7u2" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LPs-jA-DiJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="2DH-jT-ocr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nky-cZ-mdK">
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IoT-ab-heh">
+                                <rect key="frame" x="0.0" y="20" width="320" height="498"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="YzO-tZ-7u2" id="PYJ-Bh-4ZJ"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="apm-yn-7vq">
+                                <rect key="frame" x="142" y="266" width="37" height="37"/>
+                                <color key="color" red="0.23137254900000001" green="0.47843137250000001" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5XB-fi-Jrs">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1UL-TV-arR">
+                                        <rect key="frame" x="39" y="4" width="42" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="42" id="Wbt-d9-Hg8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                        <state key="normal" image="back-button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onBackButtonPressed:" destination="YzO-tZ-7u2" eventType="touchUpInside" id="b3u-xK-ZaN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R85-Rf-aKJ">
+                                        <rect key="frame" x="89" y="4" width="42" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="42" id="DUy-tI-xip"/>
+                                            <constraint firstAttribute="height" constant="42" id="rr8-cr-ksc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                        <state key="normal" image="forward-button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onForwardPressed:" destination="YzO-tZ-7u2" eventType="touchUpInside" id="agY-y7-lvA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPv-eT-o37">
+                                        <rect key="frame" x="139" y="4" width="42" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="42" id="bOG-oL-PwF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                        <state key="normal" image="stop-button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onStopLoadingButtonPressed:" destination="YzO-tZ-7u2" eventType="touchUpInside" id="1JJ-ga-bHu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDi-8L-lib">
+                                        <rect key="frame" x="189" y="4" width="42" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="42" id="tuq-WN-fib"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                        <state key="normal" image="reload-button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onReloadButtonPressed:" destination="YzO-tZ-7u2" eventType="touchUpInside" id="6Bh-8k-fsI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gs9-Xc-eC9">
+                                        <rect key="frame" x="239" y="4" width="82" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="9ef-vY-ZF5"/>
+                                            <constraint firstAttribute="width" constant="82" id="CV2-ql-hug"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
+                                        <state key="normal" title="Close">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onNewFeatureButtonPressed:" destination="YzO-tZ-7u2" eventType="touchUpInside" id="scJ-Ba-0qq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.47843137250000001" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="LDi-8L-lib" firstAttribute="leading" secondItem="lPv-eT-o37" secondAttribute="trailing" constant="8" id="2Wx-DR-69s"/>
+                                    <constraint firstAttribute="centerY" secondItem="LDi-8L-lib" secondAttribute="centerY" id="3WT-pd-Vce"/>
+                                    <constraint firstItem="gs9-Xc-eC9" firstAttribute="leading" secondItem="LDi-8L-lib" secondAttribute="trailing" constant="8" id="3f4-SY-yWz"/>
+                                    <constraint firstItem="R85-Rf-aKJ" firstAttribute="leading" secondItem="1UL-TV-arR" secondAttribute="trailing" constant="8" id="4AH-ub-bf4"/>
+                                    <constraint firstItem="R85-Rf-aKJ" firstAttribute="leading" secondItem="1UL-TV-arR" secondAttribute="trailing" constant="8" id="8WR-YP-1i7"/>
+                                    <constraint firstItem="lPv-eT-o37" firstAttribute="leading" secondItem="R85-Rf-aKJ" secondAttribute="trailing" constant="8" id="8eB-5F-DVT"/>
+                                    <constraint firstAttribute="centerY" secondItem="1UL-TV-arR" secondAttribute="centerY" id="LTf-EZ-JJf"/>
+                                    <constraint firstAttribute="bottom" secondItem="LDi-8L-lib" secondAttribute="bottom" constant="4" id="LTn-0v-QyL"/>
+                                    <constraint firstItem="lPv-eT-o37" firstAttribute="top" secondItem="5XB-fi-Jrs" secondAttribute="top" constant="4" id="OCX-QM-UaY"/>
+                                    <constraint firstAttribute="centerX" secondItem="lPv-eT-o37" secondAttribute="centerX" id="PjD-2S-jb3"/>
+                                    <constraint firstItem="gs9-Xc-eC9" firstAttribute="leading" secondItem="LDi-8L-lib" secondAttribute="trailing" constant="8" id="Qpq-tw-gwL"/>
+                                    <constraint firstAttribute="height" constant="50" id="Rrr-Ck-8kR"/>
+                                    <constraint firstItem="1UL-TV-arR" firstAttribute="top" secondItem="5XB-fi-Jrs" secondAttribute="top" constant="4" id="ZQQ-JE-1N5"/>
+                                    <constraint firstAttribute="centerY" secondItem="lPv-eT-o37" secondAttribute="centerY" id="aB1-gd-3Ej"/>
+                                    <constraint firstAttribute="bottom" secondItem="1UL-TV-arR" secondAttribute="bottom" constant="4" id="ash-Gk-08H"/>
+                                    <constraint firstAttribute="centerY" secondItem="R85-Rf-aKJ" secondAttribute="centerY" id="eYf-VO-mG1"/>
+                                    <constraint firstAttribute="bottom" secondItem="lPv-eT-o37" secondAttribute="bottom" constant="4" id="f44-LK-F9m"/>
+                                    <constraint firstAttribute="centerY" secondItem="gs9-Xc-eC9" secondAttribute="centerY" id="pIU-2u-gG2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5XB-fi-Jrs" secondAttribute="trailing" id="3cU-9j-fj6"/>
+                            <constraint firstItem="IoT-ab-heh" firstAttribute="leading" secondItem="nky-cZ-mdK" secondAttribute="leading" id="9eM-FN-e94"/>
+                            <constraint firstAttribute="trailing" secondItem="IoT-ab-heh" secondAttribute="trailing" id="L8Y-0r-Kar"/>
+                            <constraint firstItem="2DH-jT-ocr" firstAttribute="top" secondItem="5XB-fi-Jrs" secondAttribute="bottom" id="Y7c-iv-cI8"/>
+                            <constraint firstAttribute="centerX" secondItem="apm-yn-7vq" secondAttribute="centerX" id="Z70-LW-Q8B"/>
+                            <constraint firstItem="5XB-fi-Jrs" firstAttribute="leading" secondItem="nky-cZ-mdK" secondAttribute="leading" id="asb-V4-UVr"/>
+                            <constraint firstItem="IoT-ab-heh" firstAttribute="top" secondItem="LPs-jA-DiJ" secondAttribute="bottom" id="cnf-gq-ch5"/>
+                            <constraint firstAttribute="centerY" secondItem="apm-yn-7vq" secondAttribute="centerY" id="h0B-YP-YGa"/>
+                            <constraint firstAttribute="bottom" secondItem="IoT-ab-heh" secondAttribute="bottom" constant="50" id="mSg-vh-gAN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="waz-sm-rY3"/>
+                    <connections>
+                        <outlet property="backButton" destination="1UL-TV-arR" id="VOp-JH-B6h"/>
+                        <outlet property="forwardButton" destination="R85-Rf-aKJ" id="lAb-iB-lxl"/>
+                        <outlet property="networkActivityIndicator" destination="apm-yn-7vq" id="k0d-cS-ia3"/>
+                        <outlet property="reloadButton" destination="LDi-8L-lib" id="Xpq-Hw-tJM"/>
+                        <outlet property="stopButton" destination="lPv-eT-o37" id="UZi-tz-IVr"/>
+                        <outlet property="webView" destination="IoT-ab-heh" id="NvD-Ay-I19"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vna-e5-t95" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="472" y="565.15999999999997"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back-button" width="15" height="20"/>
+        <image name="forward-button" width="15" height="20"/>
+        <image name="reload-button" width="19" height="19"/>
+        <image name="stop-button" width="19" height="19"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
