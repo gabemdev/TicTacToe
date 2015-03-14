@@ -10,7 +10,6 @@
 #import <QuartzCore/QuartzCore.h>
 #import "WebViewController.h"
 
-
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *labelOne;
 @property (weak, nonatomic) IBOutlet UILabel *labelTwo;
@@ -24,10 +23,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *whichPlayerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeRemainingLabel;
 @property (strong, nonatomic) IBOutlet UILabel *movedLabel;
-@property (weak, nonatomic) IBOutlet UIButton *helpButton;
 
 @property NSArray *labelArray;
 @property BOOL didWin;
+@property (weak, nonatomic) IBOutlet UIButton *helpButton;
 @property NSTimer *timer;
 @property NSInteger timeRemaining;
 @property NSInteger turn;
@@ -150,8 +149,12 @@
     //Change string depending on current player.
     if ([locatedLabel.text isEqualToString:@"X"]) {
         self.whichPlayerLabel.text = @"O";
+        self.movedLabel.text = self.whichPlayerLabel.text;
+        self.movedLabel.textColor = self.whichPlayerLabel.textColor;
     } else if ([locatedLabel.text isEqualToString:@"O"]) {
         self.whichPlayerLabel.text = @"X";
+        self.movedLabel.text = self.whichPlayerLabel.text;
+        self.movedLabel.textColor = self.whichPlayerLabel.textColor;
     }
 
 }
@@ -367,7 +370,6 @@
     }
 }
 
-
 //Computer play??????
 
 /*
@@ -414,8 +416,8 @@
             }
         }
     }
-
-
+    
+    
 }
 
 
