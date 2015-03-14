@@ -10,6 +10,18 @@
 #import <QuartzCore/QuartzCore.h>
 #import "WebViewController.h"
 
+typedef NS_ENUM(NSInteger, LabelPosition) {
+    labelPositionTL = 0,
+    labelPositionTM = 1,
+    labelPositionTR = 2,
+    labelPositionML = 3,
+    labelPositionMM = 4,
+    labelPositionMR = 5,
+    labelPositionBL = 6,
+    labelPositionBM = 7,
+    labelPositionBR = 8
+};
+
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *labelOne;
 @property (weak, nonatomic) IBOutlet UILabel *labelTwo;
@@ -23,10 +35,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *whichPlayerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeRemainingLabel;
 @property (strong, nonatomic) IBOutlet UILabel *movedLabel;
+@property (weak, nonatomic) IBOutlet UIButton *helpButton;
 
 @property NSArray *labelArray;
 @property BOOL didWin;
-@property (weak, nonatomic) IBOutlet UIButton *helpButton;
+
 @property NSTimer *timer;
 @property NSInteger timeRemaining;
 @property NSInteger turn;
@@ -34,9 +47,7 @@
 @property CGPoint originPoint;
 @property CGPoint finalPoint;
 
-@property (nonatomic) NSInteger playerX;
-@property (nonatomic) NSInteger playerO;
-
+@property NSInteger currentPlayer;
 
 @end
 
@@ -73,6 +84,8 @@
 
     //Set the labelArray with all the labels.
     self.labelArray = @[self.labelOne, self.labelTwo, self.labelThree, self.labelFour, self.labelFive, self.labelSix, self.labelSeven, self.labelEight, self.labelNine];
+
+    self.currentPlayer = 1;
 }
 
 #pragma mark - NSString
@@ -148,11 +161,14 @@
 
     //Change string depending on current player.
     if ([locatedLabel.text isEqualToString:@"X"]) {
-        self.whichPlayerLabel.text = @"O";
-        self.movedLabel.text = self.whichPlayerLabel.text;
-        self.movedLabel.textColor = self.whichPlayerLabel.textColor;
+//        self.whichPlayerLabel.text = @"O";
+//        self.movedLabel.text = self.whichPlayerLabel.text;
+//        self.movedLabel.textColor = self.whichPlayerLabel.textColor;
+        [self computerPlay];
     } else if ([locatedLabel.text isEqualToString:@"O"]) {
+        self.currentPlayer = 1;
         self.whichPlayerLabel.text = @"X";
+        self.whichPlayerLabel.textColor = [UIColor blueColor];
         self.movedLabel.text = self.whichPlayerLabel.text;
         self.movedLabel.textColor = self.whichPlayerLabel.textColor;
     }
@@ -160,43 +176,6 @@
 }
 
 - (IBAction)onLabelMoved:(UIPanGestureRecognizer *)panGestureRecognizer {
-//    if (panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
-//        [UIView animateWithDuration:1.0 animations:^{
-//            self.movedLabel.center = self.originPoint;
-//        }];
-//    } else {
-//        self.finalPoint = [panGestureRecognizer locationInView:self.view];
-//        self.movedLabel.center = self.finalPoint;
-//        if (CGRectContainsPoint(self.movedLabel.frame, self.finalPoint)) {
-//
-//        }
-//
-//
-//    }
-
-//    self.movedLabel.center = self.originPoint;
-//    self.finalPoint = [panGestureRecognizer locationInView:self.view];
-//    self.movedLabel.center = self.finalPoint;
-//
-//    if (panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
-//        for (UILabel *label in self.labelArray) {
-//            if (CGRectContainsPoint(label.frame, self.movedLabel.center)) {
-//                label.text = self.whichPlayerLabel.text;
-//                label.textColor = self.whichPlayerLabel.textColor;
-//                NSLog(@"Text: %@, Color: %@", label.text, label.textColor);
-//
-//                [UIView animateWithDuration:0.55f animations:^{
-//                    self.movedLabel.center = self.whichPlayerLabel.center;
-//                } completion:^(BOOL finished) {
-//                    if (finished) {
-//                        NSLog(@"Moved:");
-//
-//                    }
-//                }];
-//            }
-//        }
-//    }
-
     //Set CGPoint with panGesture's locatin in the view.
     self.originPoint = [panGestureRecognizer locationInView:self.view];
 
@@ -259,12 +238,14 @@
                     self.whichPlayerLabel.textColor = [UIColor redColor];
                     [self restartTimer];
                     [self whoWon];
+                    [self computerPlay];
                     return label;
                 } else {
                     self.whichPlayerLabel.text = @"X";
                     self.whichPlayerLabel.textColor = [UIColor blueColor];
                     [self whoWon];
                     [self restartTimer];
+                    self.currentPlayer = 1;
                     return label;
                 }
             }
@@ -345,6 +326,7 @@
     self.movedLabel.text = self.whichPlayerLabel.text;
     self.movedLabel.textColor = self.whichPlayerLabel.textColor;
     [self restartTimer];
+    self.currentPlayer = 1;
 
 }
 
@@ -361,12 +343,14 @@
         self.movedLabel.text = self.whichPlayerLabel.text;
         self.whichPlayerLabel.textColor = [UIColor redColor];
         self.movedLabel.textColor = self.whichPlayerLabel.textColor;
+        [self computerPlay];
 
     } else if ([self.whichPlayerLabel.text isEqualToString:@"O"]) {
         self.whichPlayerLabel.text = @"X";
         self.movedLabel.text = self.whichPlayerLabel.text;
         self.whichPlayerLabel.textColor = [UIColor blueColor];
         self.movedLabel.textColor = self.whichPlayerLabel.textColor;
+        self.currentPlayer = 1;
     }
 }
 
@@ -381,44 +365,101 @@
  */
 
 - (void)computerPlay {
+    self.currentPlayer = 2;
+    self.turn = arc4random() % 10;
 
-    self.playerX = 1;
-    self.playerO = 2;
 
-    self.turn = arc4random_uniform(2);
 
-    if (self.turn == self.playerX) {
-        self.whichPlayerLabel.text = @"X";
-    } else if (self.turn == self.playerO) {
-        self.whichPlayerLabel.text = @"O";
-    }
+//    for (UILabel *label in self.labelArray){
+//        if (![label.text isEqualToString:@"X"] || ![label.text isEqualToString:@"O"]) {
+//            if (self.turn == 1) {
+//                self.labelOne.text = self.whichPlayerLabel.text;
+//            } else if (self.turn == 2) {
+//                self.labelTwo.text = self.whichPlayerLabel.text;
+//            } else if (self.turn == 3) {
+//                self.labelThree.text = self.whichPlayerLabel.text;
+//            } else if (self.turn == 4) {
+//                self.labelFour.text = self.whichPlayerLabel.text;
+//            } else if (self.turn == 5) {
+//                self.labelFive.text = self.whichPlayerLabel.text;
+//            } else if (self.turn == 6) {
+//                self.labelSix.text = self.whichPlayerLabel.text;
+//            } else if (self.turn == 7) {
+//                self.labelSeven.text = self.whichPlayerLabel.text;
+//            } else if (self.turn == 8) {
+//                self.labelEight.text = self.whichPlayerLabel.text;
+//            } else if (self.turn == 9) {
+//                self.labelNine.text = self.whichPlayerLabel.text;
+//            }
+//        }
+//    }
 
-    for (UILabel *label in self.labelArray){
-        if (![label.text isEqualToString:@"X"] || ![label.text isEqualToString:@"O"]) {
-            if (self.turn == 1) {
-                self.labelOne.text = self.whichPlayerLabel.text;
-            } else if (self.turn == 2) {
-                self.labelTwo.text = self.whichPlayerLabel.text;
-            } else if (self.turn == 3) {
-                self.labelThree.text = self.whichPlayerLabel.text;
-            } else if (self.turn == 4) {
-                self.labelFour.text = self.whichPlayerLabel.text;
-            } else if (self.turn == 5) {
-                self.labelFive.text = self.whichPlayerLabel.text;
-            } else if (self.turn == 6) {
-                self.labelSix.text = self.whichPlayerLabel.text;
-            } else if (self.turn == 7) {
-                self.labelSeven.text = self.whichPlayerLabel.text;
-            } else if (self.turn == 8) {
-                self.labelEight.text = self.whichPlayerLabel.text;
-            } else if (self.turn == 9) {
-                self.labelNine.text = self.whichPlayerLabel.text;
-            }
-        }
-    }
+//    switch (self.turn) {
+//        case 0:
+//            if ([self.labelOne.text isEqualToString:@""]) {
+//
+//            }
+//            break;
+//
+//        default:
+//            break;
+//    }
+
     
-    
+    if (self.turn == labelPositionTL && [self.labelOne.text isEqualToString:@""]) {
+        self.labelOne.text = @"O";
+        self.labelOne.textColor = [UIColor redColor];
+        [self changePlayerTextAndColor];
+    }
+    else if (self.turn == labelPositionTM && [self.labelTwo.text isEqualToString:@""]) {
+        self.labelTwo.text = @"O";
+        self.labelTwo.textColor = [UIColor redColor];
+        [self changePlayerTextAndColor];
+    }
+    else if (self.turn == labelPositionTR && [self.labelThree.text isEqualToString:@""]) {
+        self.labelThree.text = @"O";
+        self.labelThree.textColor = [UIColor redColor];
+        [self changePlayerTextAndColor];
+    }
+    else if (self.turn == labelPositionML && [self.labelFour.text isEqualToString:@""]) {
+        self.labelFour.text = @"O";
+        self.labelFour.textColor = [UIColor redColor];
+        [self changePlayerTextAndColor];
+    }
+    else if (self.turn == labelPositionMM && [self.labelFive.text isEqualToString:@""]) {
+        self.labelFive.text = @"O";
+        self.labelFive.textColor = [UIColor redColor];
+        [self changePlayerTextAndColor];
+    }
+    else if (self.turn == labelPositionMR && [self.labelSix.text isEqualToString:@""]) {
+        self.labelSix.text = @"O";
+        self.labelSix.textColor = [UIColor redColor];
+        [self changePlayerTextAndColor];
+    }
+    else if (self.turn == labelPositionBL && [self.labelSeven.text isEqualToString:@""]) {
+        self.labelSeven.text = @"O";
+        self.labelSeven.textColor = [UIColor redColor];
+        [self changePlayerTextAndColor];
+    }
+    else if (self.turn == labelPositionBM && [self.labelEight.text isEqualToString:@""]) {
+        self.labelEight.text = @"O";
+        self.labelEight.textColor = [UIColor redColor];
+        [self changePlayerTextAndColor];
+    }
+    else if (self.turn == labelPositionBR && [self.labelNine.text isEqualToString:@""]) {
+        self.labelNine.text = @"O";
+        self.labelNine.textColor = [UIColor redColor];
+        [self changePlayerTextAndColor];
+    } 
+
 }
 
+- (void)changePlayerTextAndColor {
+    self.currentPlayer = 1;
+    self.whichPlayerLabel.text = @"X";
+    self.whichPlayerLabel.textColor = [UIColor blueColor];
+    self.movedLabel.text = self.whichPlayerLabel.text;
+    self.movedLabel.textColor = self.whichPlayerLabel.textColor;
+}
 
 @end
