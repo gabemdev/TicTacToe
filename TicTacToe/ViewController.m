@@ -164,6 +164,7 @@ typedef NS_ENUM(NSInteger, LabelPosition) {
 //        self.whichPlayerLabel.text = @"O";
 //        self.movedLabel.text = self.whichPlayerLabel.text;
 //        self.movedLabel.textColor = self.whichPlayerLabel.textColor;
+        self.currentPlayer = 2;
         [self computerPlay];
     } else if ([locatedLabel.text isEqualToString:@"O"]) {
         self.currentPlayer = 1;
@@ -343,6 +344,7 @@ typedef NS_ENUM(NSInteger, LabelPosition) {
         self.movedLabel.text = self.whichPlayerLabel.text;
         self.whichPlayerLabel.textColor = [UIColor redColor];
         self.movedLabel.textColor = self.whichPlayerLabel.textColor;
+        self.currentPlayer = 2;
         [self computerPlay];
 
     } else if ([self.whichPlayerLabel.text isEqualToString:@"O"]) {
@@ -450,7 +452,44 @@ typedef NS_ENUM(NSInteger, LabelPosition) {
         self.labelNine.text = @"O";
         self.labelNine.textColor = [UIColor redColor];
         [self changePlayerTextAndColor];
-    } 
+    }
+
+    if (self.turn == 0) {
+        [self computerPlay];
+    }
+
+//    if (((self.turn == 1) && [self.labelOne.text isEqualToString:@"X"]) || [self.labelOne.text isEqualToString:@"O"]) {
+//        NSLog(@"Repeat");
+//        [self changePlayerTextAndColor];
+//    }
+//    else if (((self.turn == 2) && [self.labelTwo.text isEqualToString:@"X"]) || [self.labelTwo.text isEqualToString:@"O"]) {
+//        NSLog(@"Repeat");
+//        [self changePlayerTextAndColor];
+//    }
+//    else if (((self.turn == 3) && [self.labelThree.text isEqualToString:@"X"]) || [self.labelThree.text isEqualToString:@"O"]) {
+//        NSLog(@"Repeat");
+//        [self changePlayerTextAndColor];
+//    }
+//    else if (((self.turn == 4) && [self.labelFour.text isEqualToString:@"X"]) || [self.labelFour.text isEqualToString:@"O"]) {
+//       NSLog(@"Repeat");
+//        [self changePlayerTextAndColor];
+//    }
+//    else if (((self.turn == 5) && [self.labelFive.text isEqualToString:@"X"]) || [self.labelFive.text isEqualToString:@"O"]) {
+//        NSLog(@"Repeat");
+//        [self changePlayerTextAndColor];
+//    }
+//    else if (((self.turn == 6) && [self.labelSix.text isEqualToString:@"X"]) || [self.labelSix.text isEqualToString:@"O"]) {
+//        NSLog(@"Repeat");
+//    }
+//    else if (((self.turn == 7) && [self.labelSeven.text isEqualToString:@"X"]) || [self.labelSeven.text isEqualToString:@"O"]) {
+//        NSLog(@"Repeat");
+//    }
+//    else if (((self.turn == 8) && [self.labelEight.text isEqualToString:@"X"]) || [self.labelEight.text isEqualToString:@"O"]) {
+//        NSLog(@"Repeat");
+//    }
+//    else if (((self.turn == 9) && [self.labelNine.text isEqualToString:@"X"]) || [self.labelNine.text isEqualToString:@"O"]) {
+//        NSLog(@"Repeat");
+//    }
 
 }
 
